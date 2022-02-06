@@ -19,29 +19,5 @@ $info = json_decode($info, true);
 }
 
 
-sendMessage("1245");
-
-// создание нового ресурса cURL
-
-$ch = curl_init();
-
-// установка URL и других необходимых параметров
-
-curl_setopt($ch, CURLOPT_URL, "$url");
-
-//а это что бы на страницу не выводилось
-
-curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
-
-//это в справочнике прочтете
-curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
-curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
-
-// загрузка страницы и выдача её браузеру другими словами при открытии страницы где вы этот скрипт сделаете автоматически отправится сообщение в заданный вами телеграм чат.
-
-curl_exec($ch);
-
-// завершение сеанса и освобождение ресурсов
-
-curl_close($ch);
+sendMessage("heroku");
 ?>
